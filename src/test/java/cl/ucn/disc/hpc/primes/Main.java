@@ -29,7 +29,7 @@ public class Main {
 
 
         //Maximo
-        final long MAX=1000000;
+        final long MAX=200000;
 
         //Cronometro
         final StopWatch stopWatch= StopWatch.createStarted();
@@ -41,7 +41,7 @@ public class Main {
         /**
          * EL ejecutador
          */
-        final ExecutorService executorService= Executors.newFixedThreadPool(1);
+        final ExecutorService executorService= Executors.newFixedThreadPool(16);
         //
         for(long i=1;i<MAX;i++){
 
