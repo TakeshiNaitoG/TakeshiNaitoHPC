@@ -29,7 +29,7 @@ public class Main {
 
 
         //Maximo
-        final long MAX=200000;
+        final long MAX=20;
 
         //Cronometro
         final StopWatch stopWatch= StopWatch.createStarted();
@@ -45,7 +45,7 @@ public class Main {
         //
         for(long i=1;i<MAX;i++){
 
-            executorService.submit(new PrimeTask(i));
+            executorService.submit(new PrimeTask(i));e
         }
         //no realixa mas tareas
         executorService.shutdown();
@@ -89,6 +89,7 @@ public class Main {
             if(isPrime(this.number)){
                 //log.debug("{} es primo!!!",this.number);
                 counter.getAndIncrement();
+                System.out.print("estoy en el run");
 
             }
 
@@ -113,10 +114,7 @@ public class Main {
                 }
             }
             return true;
-
-
         }
-
 
     }
 
